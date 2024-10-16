@@ -17,4 +17,8 @@ routes.use(urlBase + '/dashboard', fornecedorDashboard);
 const fornecedorRouter = require("./formularios/fornecedor/fornecedorRoutes");
 routes.use(urlBase, fornecedorRouter);
 
+// Recebimento de MP
+const recebimentoMpRouter = require("./formularios/recebimento-mp/recebimentoMpRoutes");
+routes.use(urlBase, recebimentoMpRouter);
+
 module.exports = routes;

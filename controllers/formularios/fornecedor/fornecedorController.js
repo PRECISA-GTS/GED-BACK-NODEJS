@@ -641,7 +641,7 @@ class FornecedorController {
                 LEFT JOIN profissional AS pab ON (f.profissionalID = pab.profissionalID)
                 LEFT JOIN profissional AS pa ON (f.aprovaProfissionalID = pa.profissionalID)
                 LEFT JOIN par_fornecedor_modelo AS p ON (f.parFornecedorModeloID = p.parFornecedorModeloID)
-            WHERE f.fornecedorID = ? `
+            WHERE f.fornecedorID = ?`
             const [resultFornecedor] = await db.promise().query(sqlUnidade, [id])
 
             if (!resultFornecedor || resultFornecedor?.length == 0) return res.status(200).json({ message: 'Nenhum registro encontrado!' })

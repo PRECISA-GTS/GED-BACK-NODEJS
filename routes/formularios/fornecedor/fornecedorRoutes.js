@@ -20,36 +20,36 @@ router.post(`${route}/updateData/:id`, fornecedorController.updateData);
 router.delete(`${route}/delete/:id/:usuarioID/:unidadeID`, fornecedorController.deleteData);
 
 // Específicos
-// router.post(`${route}/getFabricas`, fornecedorController.getFabricas);
-// router.post(`${route}/cnpj`, fornecedorController.getFornecedorByCnpj);
-// router.post(`${route}/mapaSipeAgro`, fornecedorController.getMapaSipeAgro);
+router.post(`${route}/getFabricas`, fornecedorController.getFabricas);
+router.post(`${route}/cnpj`, fornecedorController.getFornecedorByCnpj);
+router.post(`${route}/mapaSipeAgro`, fornecedorController.getMapaSipeAgro);
 
-// // Verifica quem preenche o formulario do fornecedor
-// router.post(`${route}/paramsNewFornecedor`, fornecedorController.paramsNewFornecedor);
+// Verifica quem preenche o formulario do fornecedor
+router.post(`${route}/paramsNewFornecedor`, fornecedorController.paramsNewFornecedor);
 
-// router.post(`${route}/makeFornecedor`, fornecedorController.makeFornecedor);
-// router.post(`${route}/fornecedorStatus`, fornecedorController.fornecedorStatus);
-// // router.post(`${route}/sendMail`, fornecedorController.sendMail);
-// router.post(`${route}/getItemScore`, fornecedorController.getItemScore);
-// router.post(`${route}/saveItemScore`, fornecedorController.saveItemScore);
-// router.post(`${route}/getModels`, fornecedorController.getModels);
-// router.post(`${route}/getProducts`, fornecedorController.getProducts);
-// router.post(`${route}/getGruposAnexo`, fornecedorController.getGruposAnexo);
+router.post(`${route}/makeFornecedor`, fornecedorController.makeFornecedor);
+router.post(`${route}/fornecedorStatus`, fornecedorController.fornecedorStatus);
+// router.post(`${route}/sendMail`, fornecedorController.sendMail);
+router.post(`${route}/getItemScore`, fornecedorController.getItemScore);
+router.post(`${route}/saveItemScore`, fornecedorController.saveItemScore);
+router.post(`${route}/getModels`, fornecedorController.getModels);
+router.post(`${route}/getProducts`, fornecedorController.getProducts);
+router.post(`${route}/getGruposAnexo`, fornecedorController.getGruposAnexo);
 
-// router.post(`${route}/conclusionAndSendForm/:id`, fornecedorController.conclusionAndSendForm);
-// router.post(`${route}/updateFormStatus/:id`, fornecedorController.updateFormStatus);
-// router.post(`${route}/getMovementHistory/:id`, fornecedorController.getMovementHistory);
-// router.post(`${route}/verifyFormPending/:id`, fornecedorController.verifyFormPending);
-// router.post(`${route}/changeFormStatus/:id`, fornecedorController.changeFormStatus);
-// router.post(`${route}/getGruposAnexo`, fornecedorController.getGruposAnexo);
-// router.post(`${route}/sendNotification`, fornecedorController.sendNotification);
-// router.post(`${route}/getFornecedoresAprovados`, fornecedorController.getFornecedoresAprovados);
-// router.post(`${route}/getFornecedores`, fornecedorController.getFornecedores);
-// router.post(`${route}/getFornecedoresPrestadorServico`, fornecedorController.getFornecedoresPrestadorServico);
-// router.get(`${route}/verifyIfHasModel/:id`, fornecedorController.verifyIfHasModel);
+router.post(`${route}/conclusionAndSendForm/:id`, fornecedorController.conclusionAndSendForm);
+router.post(`${route}/updateFormStatus/:id`, fornecedorController.updateFormStatus);
+router.post(`${route}/getMovementHistory/:id`, fornecedorController.getMovementHistory);
+router.post(`${route}/verifyFormPending/:id`, fornecedorController.verifyFormPending);
+router.post(`${route}/changeFormStatus/:id`, fornecedorController.changeFormStatus);
+router.post(`${route}/getGruposAnexo`, fornecedorController.getGruposAnexo);
+router.post(`${route}/sendNotification`, fornecedorController.sendNotification);
+router.post(`${route}/getFornecedoresAprovados`, fornecedorController.getFornecedoresAprovados);
+router.post(`${route}/getFornecedores`, fornecedorController.getFornecedores);
+router.post(`${route}/getFornecedoresPrestadorServico`, fornecedorController.getFornecedoresPrestadorServico);
+router.get(`${route}/verifyIfHasModel/:id`, fornecedorController.verifyIfHasModel);
 
-// //Envia email baseado no status do fornecedor
-// router.post(`${route}/sendEmailBasedStatus`, fornecedorController.sendEmailBasedStatus);
+//Envia email baseado no status do fornecedor
+router.post(`${route}/sendEmailBasedStatus`, fornecedorController.sendEmailBasedStatus);
 
 // // Anexos
 // router.delete(`${route}/deleteAnexo/:id/:anexoID/:unidadeID/:usuarioID/:folder`, fornecedorController.deleteAnexo);
