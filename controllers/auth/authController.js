@@ -12,6 +12,7 @@ const jwtConfig = {
 class AuthController {
     async login(req, res) {
         const { cpf, password, selectedUnit } = req.body;
+        console.log("🚀 ~ cpf, password, selectedUnit:", cpf, password, selectedUnit)
 
         let error = {
             email: ['Algo está errado!']

@@ -713,6 +713,7 @@ class RecebimentoMpController {
 
     //* Salva os anexos do formulário na pasta uploads/anexo e insere os dados na tabela anexo
     async saveAnexo(req, res) {
+        console.log('saveAnexo Controller...')
         try {
             const { id } = req.params;
             const pathDestination = req.pathDestination

@@ -2,7 +2,7 @@ const { Router } = require('express');
 const router = Router();
 const route = '/formularios/recebimento-mp';
 
-// const { configureMulterMiddleware } = require('../../../config/uploads');
+const { configureMulterMiddleware } = require('../../../config/uploads');
 const RecebimentoMpController = require('../../../controllers/formularios/recebimentoMp/recebimentoMpController');
 const recebimentoMpController = new RecebimentoMpController();
 
@@ -17,12 +17,13 @@ router.post(`${route}/changeFormStatus/:id`, recebimentoMpController.changeFormS
 router.post(`${route}/getProdutosRecebimento`, recebimentoMpController.getProdutosRecebimento);
 
 //? MULTER: Upload de arquivo
-// router.delete(`${route}/deleteAnexo/:id/:anexoID/:unidadeID/:usuarioID/:folder`, recebimentoMpController.deleteAnexo);
-// router.post(`${route}/saveAnexo/:id/:folder/:usuarioID/:unidadeID`, (req, res, next) => {
-//     const folder = req.params.folder ?? '/' //? Pasta destino do arquivo (grupo-anexo/produto/item/...)
-//     const pathDestination = `uploads/${req.params.unidadeID}/recebimento-mp/${folder}/`
-//     req.pathDestination = pathDestination
-//     configureMulterMiddleware(req, res, next, req.params.usuarioID, req.params.unidadeID, pathDestination)
-// }, recebimentoMpController.saveAnexo);
+router.delete(`${route}/deleteAnexo/:id/:anexoID/:unidadeID/:usuarioID/:folder`, recebimentoMpController.deleteAnexo);
+router.post(`${route}/saveAnexo/:id/:folder/:usuarioID/:unidadeID`, (req, res, next) => {
+    const folder = req.params.folder ?? '/' //? Pasta destino do arquivo (grupo-anexo/produto/item/...)
+    const pathDestination = `uploads/${req.params.unidadeID}/recebimento-mp/${folder}/`
+    req.pathDestination = pathDestination
+    console.log("🚀 ~ Routes pathDestination:", pathDestination)
+    configureMulterMiddleware(req, res, next, req.params.usuarioID, req.params.unidadeID, pathDestination)
+}, recebimentoMpController.saveAnexo);
 
 module.exports = router;
